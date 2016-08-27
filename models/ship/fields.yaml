@@ -1,0 +1,71 @@
+fields:
+    name:
+        label: Name
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    buildingyard:
+        label: 'Building Yard'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    yardtype:
+        label: 'Yard Type'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    type:
+        label: Type
+        oc.commentPosition: ''
+        options:
+            - cells
+        span: auto
+        type: dropdown
+    yearbuilt:
+        label: 'Year Built'
+        oc.commentPosition: ''
+        span: auto
+        type: number
+    dwat:
+        label: DWAT
+        oc.commentPosition: ''
+        span: auto
+        type: number
+    intake20:
+        label: 'Intake 20'
+        span: auto
+        type: number
+        comment: TEU
+    intake40:
+        label: 'Intake 40'
+        span: auto
+        type: number
+        comment: TEU
+    homog14:
+        label: 'Homog 14'
+        span: auto
+        type: number
+        comment: TEU
+    reefer:
+        label: Reefer
+        span: auto
+        type: number
+        comment: plugs
+    maxspeed:
+        label: 'Max Speed'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    consumption:
+        label: Consumption
+        span: auto
+        type: number
+        comment: ts
+    gear:
+        label: Gear
+        span: auto
+        type: checkbox
+    ice:
+        label: 'ICE Class'
+        span: auto
+        type: checkbox

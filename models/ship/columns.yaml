@@ -1,0 +1,26 @@
+columns:
+    name:
+        label: 'jumplink.ships::lang.plugin.name'
+        type: text
+        searchable: true
+        sortable: true
+    intake20:
+        label: 'TEU 20'''
+        type: number
+        sortable: true
+    homog14:
+        label: 'TEU x 14 tons'
+        type: number
+        sortable: true
+    reefer:
+        label: Reefer
+        type: number
+        sortable: true
+    gear:
+        label: Gear
+        type: switch
+        sortable: true
+    ice:
+        label: 'ICE Class'
+        type: switch
+        sortable: true

@@ -1,0 +1,10 @@
+name: Ships
+form: $/jumplink/ships/models/ship/fields.yaml
+modelClass: JumpLink\Ships\Models\Ship
+defaultRedirect: jumplink/ships/ships
+create:
+    redirect: 'jumplink/ships/ships/update/:id'
+    redirectClose: jumplink/ships/ships
+update:
+    redirect: jumplink/ships/ships
+    redirectClose: jumplink/ships/ships

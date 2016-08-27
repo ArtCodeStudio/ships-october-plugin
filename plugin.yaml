@@ -1,0 +1,11 @@
+plugin:
+    name: 'jumplink.ships::lang.plugin.name'
+    description: 'jumplink.ships::lang.plugin.description'
+    author: 'Moritz Raguschat / Marc Wensauer'
+    icon: oc-icon-ship
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Ships
+        url: /jumplink/ships/ships
+        icon: icon-life-ring
