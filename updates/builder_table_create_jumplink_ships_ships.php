@@ -11,20 +11,20 @@ class BuilderTableCreateJumplinkShipsShips extends Migration
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->string('name');
-            $table->string('buildingyard');
-            $table->string('yardtype');
-            $table->smallInteger('type');
-            $table->smallInteger('yearbuilt');
-            $table->integer('dwat');
-            $table->integer('intake20');
-            $table->integer('intake40');
-            $table->integer('homog14');
-            $table->integer('reefer');
-            $table->boolean('gear');
-            $table->decimal('maxspeed', 10, 0);
-            $table->integer('consumption');
-            $table->boolean('ice');
+            $table->string('name')->nullable();
+            $table->string('buildingyard')->nullable();
+            $table->string('yardtype')->nullable();
+            $table->smallInteger('type')->nullable();
+            $table->smallInteger('yearbuilt')->nullable();
+            $table->integer('dwat')->nullable();
+            $table->integer('intake20')->nullable();
+            $table->integer('intake40')->nullable();
+            $table->integer('homog14')->nullable();
+            $table->integer('reefer')->nullable();
+            $table->boolean('gear')->nullable();
+            $table->decimal('maxspeed', 10, 0)->nullable();
+            $table->integer('consumption')->nullable();
+            $table->boolean('ice')->nullable();
         });
     }
     
