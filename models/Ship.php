@@ -21,7 +21,7 @@ class Ship extends Model
      */
     public $timestamps = false;
 
-    /**
+     /**
      * @var string The database table used by the model.
      */
     public $table = 'jumplink_ships_ships';

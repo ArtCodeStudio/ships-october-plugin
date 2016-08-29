@@ -1,55 +1,58 @@
-{#
-GRID
+{##
+# HTML
 #}
-<div class="grid">
+{% if __SELF__.property('includeHTML') %}
+	{#
+	GRID 
+	#}
+	<div class="grid">
 
-	{% for ship in ships %}
-		<div class="grid-item {{ ship.categories[0].name|slug }}">
+		{% for ship in ships %}
+			<div class="grid-item">
 
-
-			{#{% if ship.featured_images.count %}
-				<div class="featured-images text-center "> 
-					{% set image = ship.featured_images[0] %}
-					<div class="background-box ratio-16-9" 
-							style="display:block; background-image: url({{ image.path }});" 
-							title="{{ image.description }}">
-					</div>
-				</div>
-			{% endif %}#}
-
-			<div class="card-block">
 				
-				<h4 class="card-title text-lg-left text-serif">{{ ship.name }}</h4>
-
-				<div class='latest-blog-ships-content-container'>
-					{#{{ship}}#}
+				{% set image = ship.image %}
+				{#{%  if image %}#}
+					<div class="featured-images text-center "> 
+						<div class="background-box ratio-16-9" 
+								style="display:block; background-image: url({{ image|media }});" 
+								title="{{ image.description }}">
+						</div>
+					</div>
+				{#{% endif %}#}
+				<div class="card-block">
+					<h4 class="card-title text-lg-left text-serif">{{ ship.name }}</h4>
+					<div class='latest-blog-ships-content-container'>
+						{#{{ship}}#}
+					</div>
 				</div>
 
 			</div>
+		{% endfor %} 
+	</div>
+{% endif %}
 
-		
 
-		</div>
-	{% endfor %} 
-</div>
+{##
+# JavaScript
+#}
+{% if __SELF__.property('includeJavaScript') %}
+	<script>
+		/**
+		* INIT
+		*/
+		var {{ str_camel(__SELF__.alias) }}Init = function (selector) {
 
-<script>
+			console.log('Fleet Init', selector)
 
-	/**
-	* INIT
-	*/
-	var {{ str_camel(__SELF__.alias) }}Init = function (selector) {
+			$('.grid').masonry({
+				itemSelector: '.grid-item',
+				columnWidth: 350,
+				isFitWidth: true,
+				gutter:30
+			});
+			
+		}	
+	</script>
 
-		console.log('Fleet Init', selector)
-
-		$('.grid').masonry({
-			itemSelector: '.grid-item',
-			columnWidth: 350,
-			isFitWidth: true,
-			gutter:30
-		});
-		
-	}
-	
-
-</script>
+{% endif %}

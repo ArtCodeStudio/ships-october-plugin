@@ -20,7 +20,10 @@ class ShipsList extends ComponentBase
 
 	public function defineProperties()
 	{
-		return [];
+		return [
+			'includeHTML' => ['title' => 'include HTML', 'type' => 'checkbox', 'default' => 1],
+			'includeJavaScript' => ['title' => 'include JavaScript', 'type' => 'checkbox', 'default' => 1]
+		];
 	}
 
 	public function onRun()
