@@ -69,3 +69,9 @@ fields:
         label: 'ICE Class'
         span: auto
         type: checkbox
+    image:
+        label: 'image'
+        span: auto
+        type: mediafinder
+        mode: image
+

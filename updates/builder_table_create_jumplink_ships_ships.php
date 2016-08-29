@@ -25,9 +25,10 @@ class BuilderTableCreateJumplinkShipsShips extends Migration
             $table->decimal('maxspeed', 10, 0)->nullable();
             $table->integer('consumption')->nullable();
             $table->boolean('ice')->nullable();
+	    $table->string('image')->nullable();
         });
     }
-    
+  
     public function down()
     {
         Schema::dropIfExists('jumplink_ships_ships');

@@ -1,0 +1,55 @@
+{#
+GRID
+#}
+<div class="grid">
+
+	{% for ship in ships %}
+		<div class="grid-item {{ ship.categories[0].name|slug }}">
+
+
+			{#{% if ship.featured_images.count %}
+				<div class="featured-images text-center "> 
+					{% set image = ship.featured_images[0] %}
+					<div class="background-box ratio-16-9" 
+							style="display:block; background-image: url({{ image.path }});" 
+							title="{{ image.description }}">
+					</div>
+				</div>
+			{% endif %}#}
+
+			<div class="card-block">
+				
+				<h4 class="card-title text-lg-left text-serif">{{ ship.name }}</h4>
+
+				<div class='latest-blog-ships-content-container'>
+					{#{{ship}}#}
+				</div>
+
+			</div>
+
+		
+
+		</div>
+	{% endfor %} 
+</div>
+
+<script>
+
+	/**
+	* INIT
+	*/
+	var {{ str_camel(__SELF__.alias) }}Init = function (selector) {
+
+		console.log('Fleet Init', selector)
+
+		$('.grid').masonry({
+			itemSelector: '.grid-item',
+			columnWidth: 350,
+			isFitWidth: true,
+			gutter:30
+		});
+		
+	}
+	
+
+</script>
