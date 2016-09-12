@@ -11,19 +11,47 @@
 			<div class="grid-item">
 
 				
-				{% set image = ship.image %}
+				{% set image = ship.image|mediathumb_resize('width', 350) %}
 				{#{%  if image %}#}
 					<div class="featured-images text-center "> 
 						<div class="background-box ratio-16-9" 
-								style="display:block; background-image: url({{ image|media }});" 
+								style="display:block; background-image: url({{ image }});" 
 								title="{{ image.description }}">
 						</div>
 					</div>
 				{#{% endif %}#}
 				<div class="card-block">
-					<h4 class="card-title text-lg-left text-serif">{{ ship.name }}</h4>
+					<h4 class="card-title text-xs-center text-serif">{{ ship.name }}</h4>
 					<div class='latest-blog-ships-content-container'>
-						{#{{ship}}#}
+						<table class="table table-striped">
+							<tbody>
+								<tr>
+									<td>LOA:</td>
+									<td>{{ship.yearbuilt}}</td>
+									<td>Built: </td>
+									<td>{{ship.yearbuilt}}</td>
+									
+								</tr>
+								<tr>
+									<td>DWCC:</td>
+									<td></td>
+									<td>Cranes:</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>IMO Nr.:</td>
+									<td></td>
+									<td>Beam:</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Flag:</td>
+									<td></td>
+									<td>Type:</td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 				</div>
 

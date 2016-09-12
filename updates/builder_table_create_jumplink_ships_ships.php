@@ -14,18 +14,25 @@ class BuilderTableCreateJumplinkShipsShips extends Migration
             $table->string('name')->nullable();
             $table->string('buildingyard')->nullable();
             $table->string('yardtype')->nullable();
-            $table->smallInteger('type')->nullable();
-            $table->smallInteger('yearbuilt')->nullable();
-            $table->integer('dwat')->nullable();
-            $table->integer('intake20')->nullable();
-            $table->integer('intake40')->nullable();
-            $table->integer('homog14')->nullable();
-            $table->integer('reefer')->nullable();
-            $table->boolean('gear')->nullable();
-            $table->decimal('maxspeed', 10, 0)->nullable();
-            $table->integer('consumption')->nullable();
-            $table->boolean('ice')->nullable();
-	    $table->string('image')->nullable();
+            $table->string('type')->nullable();
+            $table->string('yearbuilt')->nullable();
+            $table->string('dwat')->nullable();
+            $table->string('intake20')->nullable();
+            $table->string('intake40')->nullable();
+            $table->string('homog14')->nullable();
+            $table->string('reefer')->nullable();
+            $table->string('gear')->nullable();
+            $table->string('maxspeed')->nullable();
+            $table->string('consumption')->nullable();
+            $table->string('ice')->nullable();
+
+            $table->string('loa')->nullable();
+            $table->string('dwcc')->nullable();
+            $table->string('cranes')->nullable();
+            $table->string('imo')->nullable();
+            $table->string('beam')->nullable();
+            $table->string('flag')->nullable();
+	        $table->string('image')->nullable();
         });
     }
   
