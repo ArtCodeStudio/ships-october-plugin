@@ -13,17 +13,17 @@ fields:
 #        label: 'Yard Type'
 #        oc.commentPosition: ''
 #        span: auto
-#        type: text
-#    type:
-#        label: Type
-#        oc.commentPosition: ''
-#        span: auto
-#        type: text
-#    yearbuilt:
-#        label: 'Year Built'
-#        oc.commentPosition: ''
-#        span: auto
-#        type: text
+    #        type: text
+    type:
+        label: Type
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    yearbuilt:
+        label: 'Year Built'
+        oc.commentPosition: ''
+        span: auto
+        type: text
 #    dwat:
 #        label: DWAT
 #        oc.commentPosition: ''
@@ -67,32 +67,32 @@ fields:
 #        label: 'ICE Class'
 #        span: auto
 #        type: text
-    image:
-        label: 'image'
-        span: auto
-        type: mediafinder
-        mode: image
     loa:
         label: 'LOA'
         span: auto
         type: text
     dwcc:
-        label: 'dwcc'
+        label: 'DWCC'
         span: auto
         type: text
     cranes:
-        label: 'cranes'
+        label: 'Cranes'
         span: auto
         type: text
     imo:
-        label: 'imo'
+        label: 'IMO'
         span: auto
         type: text
     beam:
-        label: 'beam'
+        label: 'Beam'
         span: auto
         type: text
     flag:
-        label: 'flag'
+        label: 'Flag'
         span: auto
         type: text
+    image:
+        label: 'Image'
+        span: auto
+        type: mediafinder
+        mode: image

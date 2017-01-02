@@ -22,33 +22,33 @@
 				{#{% endif %}#}
 				<div class="card-block">
 					<h4 class="card-title text-xs-center text-serif">{{ ship.name }}</h4>
-					<div class='latest-blog-ships-content-container'>
+					<div class='content-container'>
 						<table class="table table-striped">
 							<tbody>
 								<tr>
 									<td>LOA:</td>
-									<td>{{ship.yearbuilt}}</td>
+									<td class='data'>{{ship.yearbuilt}}</td>
 									<td>Built: </td>
-									<td>{{ship.yearbuilt}}</td>
+									<td class='data'>{{ship.yearbuilt}}</td>
 									
 								</tr>
 								<tr>
 									<td>DWCC:</td>
-									<td></td>
+									<td class='data'>{{ship.dwcc}}</td>
 									<td>Cranes:</td>
-									<td></td>
+									<td class='data'>{{ship.cranes}}</td>
 								</tr>
 								<tr>
-									<td>IMO Nr.:</td>
-									<td></td>
+									<td>IMO:</td>
+									<td class='data'>{{ship.imo}}</td>
 									<td>Beam:</td>
-									<td></td>
+									<td class='data'>{{ship.beam}}</td>
 								</tr>
 								<tr>
 									<td>Flag:</td>
-									<td></td>
+									<td class='data'>{{ship.flag}}</td>
 									<td>Type:</td>
-									<td></td>
+									<td class='data'>{{ship.type}}</td>
 								</tr>
 							</tbody>
 						</table>
@@ -58,6 +58,8 @@
 			</div>
 		{% endfor %} 
 	</div>
+
+
 {% endif %}
 
 

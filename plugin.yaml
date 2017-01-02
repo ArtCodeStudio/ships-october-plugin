@@ -1,7 +1,7 @@
 plugin:
     name: 'jumplink.ships::lang.plugin.name'
     description: 'jumplink.ships::lang.plugin.description'
-    author: 'Moritz Raguschat / Marc Wensauer'
+    author: 'Moritz Raguschat, Marc Wensauer (JumpLink Network)'
     icon: oc-icon-ship
     homepage: ''
 navigation:
