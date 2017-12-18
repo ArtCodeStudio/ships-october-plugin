@@ -13,15 +13,17 @@
 
 				
 				<div class="grid-item-inner">
-				{% set image = ship.image | media %}
-				{#{%  if image %}#}
+					{% if ship.image %}
+						{% set image = ship.image | media %}
+					{% else %}
+						{% set image = '' %}
+					{% endif %}
 					<div class="featured-images text-center "> 
 						<div class="background-box ratio-16-9 ship-bg" 
 								style="background-image: url('{{ image }}');" 
 								title="{{ image.description }}">
 						</div>
 					</div>
-				{#{% endif %}#}
 					<div class="card-block">
 						<h4 class="card-title text-xs-center text-serif">{{ ship.name }}</h4>
 						<div class='content-container'>
