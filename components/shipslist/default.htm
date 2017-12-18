@@ -14,7 +14,7 @@
 				
 				<div class="grid-item-inner">
 					{% if ship.image %}
-						{% set image = ship.image | media %}
+						{% set image = ship.image | mediathumb_resize('width', 800) %}
 					{% else %}
 						{% set image = '' %}
 					{% endif %}
