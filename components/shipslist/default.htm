@@ -7,54 +7,56 @@
 	#}
 	<div class="grid">
 
+		<div class="grid-sizer"></div>
 		{% for ship in ships %}
 			<div class="grid-item">
 
 				
-				{% set image = ship.image|mediathumb_resize('width', 350) %}
+				<div class="grid-item-inner">
+				{% set image = ship.image | media %}
 				{#{%  if image %}#}
 					<div class="featured-images text-center "> 
-						<div class="background-box ratio-16-9" 
-								style="display:block; background-image: url({{ image }});" 
+						<div class="background-box ratio-16-9 ship-bg" 
+								style="background-image: url('{{ image }}');" 
 								title="{{ image.description }}">
 						</div>
 					</div>
 				{#{% endif %}#}
-				<div class="card-block">
-					<h4 class="card-title text-xs-center text-serif">{{ ship.name }}</h4>
-					<div class='content-container'>
-						<table class="table table-striped">
-							<tbody>
-								<tr>
-									<td>LOA:</td>
-									<td class='data'>{{ship.yearbuilt}}</td>
-									<td>Built: </td>
-									<td class='data'>{{ship.yearbuilt}}</td>
-									
-								</tr>
-								<tr>
-									<td>DWCC:</td>
-									<td class='data'>{{ship.dwcc}}</td>
-									<td>Cranes:</td>
-									<td class='data'>{{ship.cranes}}</td>
-								</tr>
-								<tr>
-									<td>IMO:</td>
-									<td class='data'>{{ship.imo}}</td>
-									<td>Beam:</td>
-									<td class='data'>{{ship.beam}}</td>
-								</tr>
-								<tr>
-									<td>Flag:</td>
-									<td class='data'>{{ship.flag}}</td>
-									<td>Type:</td>
-									<td class='data'>{{ship.type}}</td>
-								</tr>
-							</tbody>
-						</table>
+					<div class="card-block">
+						<h4 class="card-title text-xs-center text-serif">{{ ship.name }}</h4>
+						<div class='content-container'>
+							<table class="table table-striped">
+								<tbody>
+									<tr>
+										<td>LOA:</td>
+										<td class='data'>{{ship.loa}}</td>
+										<td>Built: </td>
+										<td class='data'>{{ship.yearbuilt}}</td>
+										
+									</tr>
+									<tr>
+										<td>DWCC:</td>
+										<td class='data'>{{ship.dwcc}}</td>
+										<td>Cranes:</td>
+										<td class='data'>{{ship.cranes}}</td>
+									</tr>
+									<tr>
+										<td>IMO:</td>
+										<td class='data'>{{ship.imo}}</td>
+										<td>Beam:</td>
+										<td class='data'>{{ship.beam}}</td>
+									</tr>
+									<tr>
+										<td>Flag:</td>
+										<td class='data'>{{ship.flag}}</td>
+										<td>Type:</td>
+										<td class='data'>{{ship.type}}</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
-				</div>
-
+        </div>
 			</div>
 		{% endfor %} 
 	</div>
@@ -71,18 +73,25 @@
 		/**
 		* INIT
 		*/
-		var {{ str_camel(__SELF__.alias) }}Init = function (selector) {
+		$('.grid').on( 'layoutComplete', function( event, laidOutItems ) {
+		  console.log("Masonry layout complete!")
+			
+		});
+
+		var reMasonry={{ str_camel(__SELF__.alias) }}Init = function (selector) {
 
 			console.log('Fleet Init', selector)
+			
 
 			$('.grid').masonry({
 				itemSelector: '.grid-item',
-				columnWidth: 350,
+				columnWidth: '.grid-sizer',
 				isFitWidth: true,
 				gutter:30
 			});
 			
 		}	
+		
 	</script>
 
 {% endif %}
