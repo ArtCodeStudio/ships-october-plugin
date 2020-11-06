@@ -20,6 +20,10 @@ columns:
         label: Cranes
         type: text
         sortable: true
+    cc:
+        label: 'Container Capacity'
+        type: text
+        sortable: true
     imo:
         label: IMO
         type: text
@@ -30,9 +34,5 @@ columns:
         sortable: true
     flag:
         label: Flag
-        type: text
-        sortable: true
-    cc:
-        label: 'Container Capacity'
         type: text
         sortable: true
