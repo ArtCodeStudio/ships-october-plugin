@@ -4,51 +4,35 @@ columns:
         type: text
         searchable: true
         sortable: true
-#    intake20:
-#        label: 'TEU 20'''
-#        type: text
-#        sortable: true
-#    homog14:
-#        label: 'TEU x 14 tons'
-#        type: text
-#        sortable: true
-#    reefer:
-#        label: Reefer
-#        type: text
-#        sortable: true
-#    gear:
-#        label: Gear
-#        type: text
-#        sortable: true
-#    ice:
-#        label: 'ICE Class'
-#        type: text
-#        sortable: true
     yearbuilt:
         label: 'Year built'
         type: text
         sortable: true
     loa:
-        label: 'LOA'
+        label: LOA
         type: text
         sortable: true
     dwcc:
-        label: 'DWCC'
+        label: DWCC
         type: text
         sortable: true
     cranes:
-        label: 'Cranes'
+        label: Cranes
         type: text
         sortable: true
     imo:
-        label: 'IMO'
+        label: IMO
         type: text
         sortable: true
     beam:
-        label: 'Beam'
+        label: Beam
         type: text
         sortable: true
     flag:
-        label: 'Flag'
+        label: Flag
+        type: text
+        sortable: true
+    cc:
+        label: 'Container Capacity'
         type: text
         sortable: true

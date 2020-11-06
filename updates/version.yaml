@@ -3,3 +3,6 @@
 1.0.2:
     - 'Created table jumplink_ships_ships'
     - builder_table_create_jumplink_ships_ships.php
+1.0.3:
+    - 'Updated table jumplink_ships_ships'
+    - builder_table_update_jumplink_ships_ships.php

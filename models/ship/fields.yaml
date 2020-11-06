@@ -4,16 +4,6 @@ fields:
         oc.commentPosition: ''
         span: auto
         type: text
-#    buildingyard:
-#        label: 'Building Yard'
-#        oc.commentPosition: ''
-#        span: auto
-#        type: text
-#    yardtype:
-#        label: 'Yard Type'
-#        oc.commentPosition: ''
-#        span: auto
-    #        type: text
     type:
         label: Type
         oc.commentPosition: ''
@@ -24,75 +14,36 @@ fields:
         oc.commentPosition: ''
         span: auto
         type: text
-#    dwat:
-#        label: DWAT
-#        oc.commentPosition: ''
-#        span: auto
-#        type: text
-#    intake20:
-#        label: 'Intake 20'
-#        span: auto
-#        type: text
-#        comment: TEU
-#    intake40:
-#        label: 'Intake 40'
-#        span: auto
-#        type: text
-#        comment: TEU
-#    homog14:
-#        label: 'Homog 14'
-#        span: auto
-#        type: text
-#        comment: TEU
-#    reefer:
-#        label: Reefer
-#        span: auto
-#        type: text
-#        comment: plugs
-#    maxspeed:
-#        label: 'Max Speed'
-#        oc.commentPosition: ''
-#        span: auto
-#        type: text
-#    consumption:
-#        label: Consumption
-#        span: auto
-#        type: text
-#        comment: ts
-#    gear:
-#        label: Gear
-#        span: auto
-#        type: text
-#    ice:
-#        label: 'ICE Class'
-#        span: auto
-#        type: text
     loa:
-        label: 'LOA'
+        label: LOA
         span: auto
         type: text
     dwcc:
-        label: 'DWCC'
+        label: DWCC
         span: auto
         type: text
     cranes:
-        label: 'Cranes'
+        label: Cranes
+        span: auto
+        type: text
+    cc:
+        label: 'Container Capacity'
         span: auto
         type: text
     imo:
-        label: 'IMO'
+        label: IMO
         span: auto
         type: text
     beam:
-        label: 'Beam'
+        label: Beam
         span: auto
         type: text
     flag:
-        label: 'Flag'
+        label: Flag
         span: auto
         type: text
     image:
-        label: 'Image'
+        label: Image
         span: auto
         type: mediafinder
         mode: image

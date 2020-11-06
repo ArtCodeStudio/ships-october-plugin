@@ -38,9 +38,14 @@
 									</tr>
 									<tr>
 										<td>DWCC:</td>
-										<td class='data'>{{ship.dwcc}}</td>
-										<td>Cranes:</td>
-										<td class='data'>{{ship.cranes}}</td>
+                    <td class='data'>{{ship.dwcc}}</td>
+                  {% if ship.cc %}
+                    <td>Cargo capacity:</td>
+                    <td class='data'>{{ship.cc}}</td>
+                  {% else %}
+                    <td>Cranes:</td>
+                    <td class='data'>{{ship.cranes}}</td>
+                  {% endif %}
 									</tr>
 									<tr>
 										<td>IMO:</td>
